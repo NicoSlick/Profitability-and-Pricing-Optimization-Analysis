@@ -6,4 +6,4 @@ This project uses SQL to analyze and optimize supply chain performance by focusi
 
 logistics.csv - The data set used in this project (15,000 Lines)
 
-profitability_analysis - SQL code exported from MySQLWorkbench 
+profitability_analysis.sql - SQL code exported from MySQLWorkbench 
