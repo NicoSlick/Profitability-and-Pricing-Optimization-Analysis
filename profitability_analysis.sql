@@ -8,7 +8,7 @@ WITH product_performance AS (
         (SUM(order_item_total_amount) / (SELECT SUM(order_item_total_amount) FROM logistics.logistics)) * 100 AS sales_contribution, -- Sales contribution to total revenue as a percentage
         CASE 
             WHEN AVG(order_item_profit_ratio) < 0.04999 THEN 'Low Profit'
-            WHEN AVG(order_item_profit_ratio) BETWEEN 0.05 AND 0.1999 THEN 'Average Profit'
+            WHEN AVG(order_item_profit_ratio) BETWEEN 0.05 AND 0.19999 THEN 'Average Profit'
             ELSE 'High Profit'
         END AS profit_class, -- Classifaction of product based on profit margin bracket 
         (SUM(order_item_discount) / NULLIF(SUM(order_item_total_amount), 0)) * 100 AS discount_impact -- Discount impact on revenue as a percentage
